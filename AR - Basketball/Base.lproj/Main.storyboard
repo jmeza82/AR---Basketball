@@ -1,27 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="AR___Basketball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DKK-iJ-daY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAU-Mz-2qp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="IY5-0r-SZ9">
+                                <rect key="frame" x="70.5" y="612" width="234" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icp-3u-GRt" customClass="CustomButtons" customModule="AR___Basketball" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="E2h-G7-0ep"/>
+                                            <constraint firstAttribute="width" constant="70" id="ZPu-cx-dcC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="&lt; - &gt;">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startHorizontalAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="JVv-HG-ynw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlY-VX-pGV" customClass="CustomButtons" customModule="AR___Basketball" customModuleProvider="target">
+                                        <rect key="frame" x="82" y="0.0" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4VO-Mo-g6a"/>
+                                            <constraint firstAttribute="width" constant="70" id="VmB-mP-vOj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopAllActions:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Dgo-bE-lRS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3K-Ab-wm1" customClass="CustomButtons" customModule="AR___Basketball" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="0.0" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="fRH-d1-ZBc"/>
+                                            <constraint firstAttribute="width" constant="70" id="vrU-Fc-lOc"/>
+                                        </constraints>
+                                        <state key="normal" title="&lt; - &gt;">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startRoundAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="jef-tf-CwH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ep-xq-gzv" customClass="CustomButtons" customModule="AR___Basketball" customModuleProvider="target">
+                                <rect key="frame" x="142.5" y="318" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Bwr-Ic-vQx"/>
+                                    <constraint firstAttribute="height" constant="30" id="zmh-07-qFO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="ADD HOOP">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addHoop:" destination="BV1-FR-VrT" eventType="touchUpInside" id="6Rs-Ny-2Vx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oAU-Mz-2qp" firstAttribute="leading" secondItem="CoY-t3-Q6N" secondAttribute="leading" id="0HK-fj-pfC"/>
+                            <constraint firstItem="5ep-xq-gzv" firstAttribute="centerX" secondItem="DKK-iJ-daY" secondAttribute="centerX" id="4Uk-bq-Htk"/>
+                            <constraint firstItem="oAU-Mz-2qp" firstAttribute="top" secondItem="DKK-iJ-daY" secondAttribute="top" id="9SI-OC-8nl"/>
+                            <constraint firstItem="oAU-Mz-2qp" firstAttribute="trailing" secondItem="CoY-t3-Q6N" secondAttribute="trailing" id="FcO-Lb-jjg"/>
+                            <constraint firstItem="oAU-Mz-2qp" firstAttribute="bottom" secondItem="CoY-t3-Q6N" secondAttribute="bottom" id="otJ-6M-Cob"/>
+                            <constraint firstItem="CoY-t3-Q6N" firstAttribute="bottom" secondItem="IY5-0r-SZ9" secondAttribute="bottom" constant="25" id="tIq-es-BYT"/>
+                            <constraint firstItem="5ep-xq-gzv" firstAttribute="centerY" secondItem="DKK-iJ-daY" secondAttribute="centerY" id="v8X-va-VXN"/>
+                            <constraint firstItem="IY5-0r-SZ9" firstAttribute="centerX" secondItem="DKK-iJ-daY" secondAttribute="centerX" id="xzw-pF-JuF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CoY-t3-Q6N"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="addHoopBtn" destination="5ep-xq-gzv" id="duk-IP-FNI"/>
+                        <outlet property="sceneView" destination="oAU-Mz-2qp" id="Tis-Mc-9sl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
